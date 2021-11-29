@@ -1,0 +1,12 @@
+{
+  "extends": ["html-validate:recommended"],
+
+  "rules": {
+    "close-order": "error",
+    "attr-quotes": "off",
+    "prefer-button": "off",
+    "element-permitted-content": "off",
+    "void-style": "off",
+    "element-required-attributes": "off"
+  }
+}
