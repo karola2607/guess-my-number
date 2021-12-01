@@ -25,23 +25,16 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-
-    //When guess is too high
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = 'Too high 🤔';
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? 'Too high 🤔' : 'Too low 😢';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = '🤢 You lost the game';
       document.querySelector('.score').textContent = 0;
     }
-
-    //When guess is to low
-  } else if (guess < secretNumber) {
-    document.querySelector('.message').textContent = 'Too low 😢';
-    score--;
-    document.querySelector('.score').textContent = score;
   }
 });
 
